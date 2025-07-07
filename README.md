@@ -1,7 +1,7 @@
 # EXL MLOps training program
 
 ## Day 1: Overview of ML
- - What is ML? Use cases
+ - What is ML? Use Cases
  - Supervised learning: classification vs regression
  - Training and evaluating basic models with scikit-learn
 ## Day 2: Exploratory Data Analysis (EDA)
