@@ -10,7 +10,7 @@
  - Workshop 2 : https://github.com/edquestofficial/mlops-training/blob/main/01_day1/01_02__Logistic_regression.ipynb
  - Workshop 3 : https://github.com/edquestofficial/mlops-training/blob/main/01_day1/01_03_XGBoost_classification.ipynb
 
-## Pdf for Day 4 content
+## Pdf for Day 1 content
  - https://github.com/edquestofficial/mlops-training/blob/main/01_day1/Day_1.pdf
 
 ## Knowledge Test
