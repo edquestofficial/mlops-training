@@ -6,7 +6,7 @@
 
 ## Assisments 
  - Create embeddings for a sentence. Ex.-"I love MLops"
- - Create embeddings with metadata,save to vectorDB and perform sementic serch with filter.
+ - Create embeddings with metadata,save to vectorDB and perform sementic search with filter.
 
 ## WorkShop Notebooks
  - Workshop 1 : https://github.com/edquestofficial/mlops-training/blob/main/04_day4/04_01_embedding_generation.ipynb
