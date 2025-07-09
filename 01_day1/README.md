@@ -17,6 +17,6 @@
  - https://github.com/edquestofficial/mlops-training/blob/main/01_day1/Knowledge_Test_Day1.pdf
  
 ## study meterial 
- what is machine learning - https://youtu.be/yifJ9p5Blj8?si=f61m6SraOW1t_WLn
- Types of machine learning - https://youtu.be/CTC5jWjrjUY?si=5K_rarqbdWpu0UJR
+ - what is machine learning - https://youtu.be/yifJ9p5Blj8?si=f61m6SraOW1t_WLn
+ - Types of machine learning - https://youtu.be/CTC5jWjrjUY?si=5K_rarqbdWpu0UJR
   
