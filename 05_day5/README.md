@@ -5,3 +5,7 @@
  - Git basics for ML
  - DVC for data/model versioning
  - Feast for feature storage and retrieval
+
+ ## study material
+
+ - github workshop - https://youtu.be/pw6dLaI6YoY?si=9KkFfwz1DZ1cZYw1
