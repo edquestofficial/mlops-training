@@ -1,6 +1,6 @@
 cd 07_day7/workshop/
 docker build -t ice-cream_image .
-docker run -it -p 8001:8000 ice-cream_image
+docker run -it -p 8001:8001 ice-cream_image
 
 to test into the browser 
 
