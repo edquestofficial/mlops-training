@@ -1,0 +1,20 @@
+
+[project]
+name = "my-project"
+version = "0.1.0"
+description = "My FastAPI App"
+readme = "README.md"
+requires-python = ">=3.9"
+
+
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "pandas",
+    "scikit-learn",
+    "matplotlib",
+    "pillow"
+]
+
+[tool.setuptools]
+py-modules = ["app", "ice_cream"]  # <- avoid autodiscovery error
