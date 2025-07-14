@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 import train as pipeline
 
    # Start MLflow tracking]
-mlflow.set_tracking_uri(" http://127.0.0.1:5000")
+mlflow.set_tracking_uri(" http://127.0.0.1:5001")
 mlflow.set_experiment("Experiment_Name")
 
 df = pd.read_csv("ice_cream.csv")

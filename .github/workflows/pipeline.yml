@@ -4,27 +4,24 @@ on:
   push:
     branches: [10day10]
 
+name: Train and Register Model
+
+on:
+  push:
+    branches:
+      - main
 jobs:
-  build-and-deploy:
+  train-model:
     runs-on: self-hosted
-
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v3
-
-      - name: Set Docker Env for Minikube
-        run: |
-          minikube docker-env --shell powershell | Invoke-Expression
-
-      - name: Build Docker Image
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      # - name: Install dependencies
+      #   run: pip install -r 10_day10/requirements.txt
+      - name: Train and log to MLflow
         run: |
           cd 10_day10/workshop
-          docker build -t edquest/icecream_api:latest ./workshop
-
-      - name: Apply Kubernetes Manifests
-        run: |
-          kubectl apply -f ./k8s/deployment.yaml
-          kubectl apply -f ./k8s/service.yaml
-
-      - name: Verify Deployment
-        run: kubectl get pods
+          python3 register.py
