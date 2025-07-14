@@ -7,14 +7,15 @@ on:
 jobs:
   train-model:
     runs-on: self-hosted
+    env:
+      AGENT_TOOLSDIRECTORY: /Users/$(whoami)/actions-cache  # Custom tool cache directory  
     steps:
+      - uses: actions/checkout@v3
+
       - name: Create custom tool cache directory
         run: mkdir -p /Users/$(whoami)/actions-cache
-        
-      - uses: actions/checkout@v3
+              
       - name: Set up Python
-        env:
-          AGENT_TOOLSDIRECTORY: /Users/$(whoami)/actions-cache
         uses: actions/setup-python@v4
         with:
           python-version: '3.9'
