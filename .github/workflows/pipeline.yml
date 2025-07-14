@@ -1,15 +1,9 @@
-name: ML CI/CD Pipeline
+name: Train and Register Model
 
 on:
   push:
     branches: [10day10]
 
-name: Train and Register Model
-
-on:
-  push:
-    branches:
-      - main
 jobs:
   train-model:
     runs-on: self-hosted
