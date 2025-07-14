@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ice-cream-api
+  labels:
+    app: ice-cream-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ice-cream-api
+  template:
+    metadata:
+      labels:
+        app: ice-cream-api
+    spec:
+      containers:
+        - name: ice-cream-api
+          image: edquest/icecream_api:latest
+          command: ["python"]
+          args:
+            - app.py
+          ports:
+            - containerPort: 5001
+          imagePullPolicy: IfNotPresent

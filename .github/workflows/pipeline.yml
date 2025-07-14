@@ -1,0 +1,30 @@
+name: ML CI/CD Pipeline
+
+on:
+  push:
+    branches: [10day10]
+
+jobs:
+  build-and-deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set Docker Env for Minikube
+        run: |
+          minikube docker-env --shell powershell | Invoke-Expression
+
+      - name: Build Docker Image
+        run: |
+          cd 10_day10/workshop
+          docker build -t edquest/icecream_api:latest ./workshop
+
+      - name: Apply Kubernetes Manifests
+        run: |
+          kubectl apply -f ./k8s/deployment.yaml
+          kubectl apply -f ./k8s/service.yaml
+
+      - name: Verify Deployment
+        run: kubectl get pods

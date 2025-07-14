@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ice-cream-service
+spec:
+  type: NodePort
+  selector:
+    app: ice-cream-api
+  ports:
+    - protocol: TCP
+      port: 5001         # Exposes this port inside the cluster
+      targetPort: 5001   # Matches containerPort in the deployment
+      nodePort: 32001    # Exposes this port outside (optional; choose 30000–32767)
+
+
