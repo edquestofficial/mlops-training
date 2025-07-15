@@ -15,13 +15,14 @@ jobs:
       - name: Create custom tool cache directory
         run: mkdir -p /Users/$(whoami)/actions-cache
               
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.9'
+      # - name: Set up Python
+      #   uses: actions/setup-python@v4
+      #   with:
+      #     python-version: '3.9'
       # - name: Install dependencies
       #   run: pip install -r 10_day10/requirements.txt
       - name: Train and log to MLflow
         run: |
+          cd /Users/$(whoami)/Desktop/workspaces/github_codes && source env/bin/activate
           cd 10_day10/workshop
           python3 register.py
