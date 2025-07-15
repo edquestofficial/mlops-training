@@ -23,6 +23,6 @@ jobs:
       #   run: pip install -r 10_day10/requirements.txt
       - name: Train and log to MLflow
         run: |
-          cd /Users/$(whoami)/Desktop/workspaces/github_codes && source env/bin/activate
+          source /Users/$(whoami)/Desktop/workspaces/github_codes/env/bin/activate
           cd 10_day10/workshop
           python3 register.py
