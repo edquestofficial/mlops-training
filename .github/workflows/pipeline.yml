@@ -17,6 +17,7 @@ jobs:
           mkdir -p /Users/$(whoami)/actions-cache
           python3 -m venv /Users/$(whoami)/actions-cache/env
           source /Users/$(whoami)/actions-cache/env/bin/activate
+          pip install mlflow
               
       # - name: Set up Python
       #   uses: actions/setup-python@v4
