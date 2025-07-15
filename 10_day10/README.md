@@ -29,7 +29,7 @@ Windows
 Download
 We recommend configuring the runner under "\actions-runner". This will help avoid issues related to service identity folder permissions and long path restrictions on Windows.
 
-# Create a folder under the drive root
+# Create a folder under the drive root for windows
 $ mkdir actions-runner; cd actions-runner# Download the latest runner package
 $ Invoke-WebRequest -Uri https://github.com/actions/runner/releases/download/v2.326.0/actions-runner-win-x64-2.326.0.zip -OutFile actions-runner-win-x64-2.326.0.zip# Optional: Validate the hash
 $ if((Get-FileHash -Path actions-runner-win-x64-2.326.0.zip -Algorithm SHA256).Hash.ToUpper() -ne '539d48815f8ecda6903755025d5b578f919a32692b731d85a9a24419fe4dbd9e'.ToUpper()){ throw 'Computed checksum did not match' }# Extract the installer
