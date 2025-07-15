@@ -16,8 +16,6 @@ jobs:
         run: |
           mkdir -p /Users/$(whoami)/actions-cache
           python3 -m venv /Users/$(whoami)/actions-cache/env
-          source /Users/$(whoami)/actions-cache/env/bin/activate
-          pip install mlflow
               
       # - name: Set up Python
       #   uses: actions/setup-python@v4
@@ -27,5 +25,7 @@ jobs:
       #   run: pip install -r 10_day10/requirements.txt
       - name: Train and log to MLflow
         run: |
+          source /Users/$(whoami)/actions-cache/env/bin/activate
+          pip install mlflow        
           cd 10_day10/workshop
           python3 register.py
