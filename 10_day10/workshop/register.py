@@ -20,4 +20,5 @@ y_train_pred, y_test_pred = pipeline.predict(model, X_train, X_test)
 mae, mse, rmse, r2 = pipeline.evaluate(y_test, y_test_pred)
 pipeline.log_model(mae, mse, rmse, r2)
 
+print('Registering model to pipeline:')
 pipeline.register_model(model)
